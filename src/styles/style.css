@@ -1,0 +1,99 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+
+    --font--family-primary: "Inter", sans-serif;
+
+    --text-color: #e7b324;
+    --background-color: hsla(0, 0%, 0%, 0.7);
+
+    --radius-default: .5rem;
+}
+
+body {
+    width: 100vw;
+    padding: .9375rem 6.25rem;
+    background: url("../assets/fundo.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    font-family: var(--font--family-primary);
+    color: var(--text-color);
+}
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        padding: .3125rem;
+        border-radius: var(--radius-default);
+
+        text-shadow: #ff0000 2px 3px 2px;
+        background: var(--background-color);
+    }
+
+main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: .625rem;
+    }
+
+        textarea {
+            padding: 1.25rem;
+            border-radius: var(--radius-default);
+            border: .125rem solid var(--text-color);
+
+            color: var(--text-color);
+            background: var(--background-color);
+
+            font-size: .875rem;
+            font-weight: 400;
+        }
+
+        textarea:focus {
+            outline: 0;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 1.875rem;
+        }
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 20px;
+                border-radius: var(--radius-default);
+                border: 2px solid var(--text-color);
+
+                font-size: 1rem;
+                font-weight: 600;
+
+                background: var(--background-color);
+                color: var(--text-color);
+            }
+
+            button:hover {
+                cursor: pointer;
+                border: 2px solid var(--background-color);
+                background: var(--text-color);
+                color: #000000;
+            }
+
+    footer {
+        display: flex;
+        font-size: 16px;
+        font-weight: 500;
+    }

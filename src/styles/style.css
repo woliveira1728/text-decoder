@@ -79,7 +79,7 @@ body {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    padding: .625rem 1.25rem;
+                    padding: 5px 10px;
                     border-radius: var(--radius-default);
                     border: .125rem solid var(--text-color);
 

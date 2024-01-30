@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decodificador de Texto</title>
     <link rel="stylesheet" href="./src/styles/style.css" />
+    <script src="./src/scripts/script.js" defer></script>
   </head>
   <body>
     <header>
@@ -14,23 +15,28 @@
     <main>
       <section>
         <textarea
-          name="area-encryptor"
-          id="area-encryptor"
+          name="Cryptor"
+          id="area-encrypt"
           cols="30"
           rows="15"
         ></textarea>
+        <div class="description-container">
+          <p>Apenas letras minúsculas e sem acento.</p>
+        </div>
         <div class="button-container">
-          <button>Criptografar</button>
-          <button>Descriptografar</button>
+          <button id="crypt-btn">Criptografar</button>
+          <button id="decrypt-btn">Descriptografar</button>
         </div>
       </section>
 
       <section>
         <textarea
-          name="area-encryptor"
-          id="area-encryptor"
+          class="second-textarea"
+          name="Decryptor"
+          id="area-decrypt"
           cols="30"
           rows="15"
+          disabled
         ></textarea>
         <div class="button-container">
           <button>Copiar</button>

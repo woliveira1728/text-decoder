@@ -2,6 +2,7 @@ const areaCryptDecrypt = document.getElementById("area-encrypt");
 const areaCryptDecryptResult = document.getElementById("area-decrypt");
 const cryptBtn = document.getElementById("crypt-btn");
 const decryptBtn = document.getElementById("decrypt-btn");
+const copyBtn = document.getElementById("copy-btn");
 
 
 const encryptor = () => {
@@ -41,6 +42,16 @@ const decryptor = () => {
     areaCryptDecryptResult.innerText = newTextDecrypt;
 }
 
+const copyText = () => {
+    const areaCopy = areaCryptDecryptResult.value;
+    navigator.clipboard.writeText(areaCopy);
+    copyBtn.innerText = "Copiado";
+    setTimeout(() => {
+        copyBtn.innerText = "Copiar";
+    }, 1 * 1000);
+      
+}
+
 cryptBtn.onclick = (e) => {
     e.preventDefault();
     encryptor();
@@ -49,4 +60,9 @@ cryptBtn.onclick = (e) => {
 decryptBtn.onclick = (e) => {
     e.preventDefault();
     decryptor();
+}
+
+copyBtn.onclick = (e) => {
+    e.preventDefault();
+    copyText();
 }
